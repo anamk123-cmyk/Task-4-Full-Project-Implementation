@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colorful All-in-One Site</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">🌈AK</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#todo">To-Do</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <input type="color" id="theme-color" title="Pick Theme" />
+  </header>
+
+  <main>
+    <section id="about" class="section section-about">
+      <h2>About Me</h2>
+      <p>I create websites that blend functionality and flair.</p>
+    </section>
+
+    <section id="projects" class="section section-projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">🎨 Portfolio</div>
+        <div class="card">📝 To-Do List</div>
+        <div class="card">🛍️ Product Page</div>
+      </div>
+    </section>
+
+    <section id="todo" class="section section-todo">
+      <h2>To-Do List</h2>
+      <input type="text" id="todo-input" placeholder="Add task..." />
+      <input type="date" id="todo-date" />
+      <button onclick="addTask()">Add</button>
+      <ul id="todo-list"></ul>
+    </section>
+
+    <section id="products" class="section section-products">
+      <h2>Products</h2>
+      <input type="text" id="search-input" placeholder="Search products..." onkeyup="searchProducts()" />
+      <div class="filters">
+        <select id="category-filter" onchange="filterProducts()">
+          <option value="all">All</option>
+          <option value="tech">Tech</option>
+          <option value="fashion">Fashion</option>
+        </select>
+        <select id="sort-filter" onchange="sortProducts()">
+          <option value="default">Sort</option>
+          <option value="price">Price</option>
+          <option value="rating">Rating</option>
+        </select>
+      </div>
+      <div id="product-container" class="grid"></div>
+    </section>
+
+    <section id="contact" class="section section-contact">
+      <h2>Contact</h2>
+      <form>
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Your Email" />
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>© 2025 Anam Kazi</footer>
+  <script src="script.js"></script>
+</body>
+</html>
